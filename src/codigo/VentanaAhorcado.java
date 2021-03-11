@@ -33,9 +33,19 @@ public class VentanaAhorcado extends javax.swing.JFrame {
     }
     
     private void chequeaLetra(String letra){
+        String auxiliar = palabraGuiones.getText();
         if (palabraOculta.contains(letra)){
             //la letra sí que está. Tengo que quitar el guión bajo
             //y ponerla en su lugar
+            //si usas indexOf te subo la nota
+            for (int i=0; i<palabraOculta.length(); i++){
+                if (palabraOculta.charAt(i) == letra.charAt(0)){
+                    System.out.println(i); 
+                    auxiliar = auxiliar.substring(0, 2*i) + letra 
+                            + auxiliar.substring(2*i + 1);
+                }
+            }
+            palabraGuiones.setText(auxiliar);
         }
         else{
             //la letra no está y hay que aumentar el contador de fallos
@@ -43,6 +53,11 @@ public class VentanaAhorcado extends javax.swing.JFrame {
             contadorFallos++;
             dibujaImagen();
         }
+        
+        //que el juego detecte si la partida ha terminado
+        //porque has ganado 
+        //o porque has perdido
+        
     }
     
     private void dibujaImagen(){

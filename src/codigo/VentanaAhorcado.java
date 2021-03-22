@@ -58,6 +58,22 @@ public class VentanaAhorcado extends javax.swing.JFrame {
         //porque has ganado 
         //o porque has perdido
         
+        //vamos a intentar contar hasta que haya 6 fallos o 
+        //ponga la imagen final
+        //tambien contar que todos los guiones bajos hayan desaparecido
+        
+        //hacer un if no has perdido (false) que funcionen los botones
+        //pero que pase a true cuando la imagen sea el default
+        //y si completas la palabra que tampoco te deje pero
+        //que ponga la imagen de victoria
+    }
+    
+    public void derrota(boolean derrota){
+        if (derrota = true){
+            //poner aqui el codigo de funcionamiento
+            //de los botones
+        }
+      //etonces si se queda aqui fuera que no se ejecute  
     }
     
     private void dibujaImagen(){
